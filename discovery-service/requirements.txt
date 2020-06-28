@@ -1,1 +1,4 @@
+newsapi-python==0.2.*
+python-dateutil==2.8.*
 google-cloud-pubsub==1.5.*
+google-cloud-secret-manager==1.0.*
