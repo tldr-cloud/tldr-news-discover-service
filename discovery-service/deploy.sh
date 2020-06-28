@@ -7,4 +7,5 @@ gcloud functions deploy discovery-service  \
     --runtime python38 \
     --memory 256 \
     --trigger-topic "daily-news-scan" \
+    --timeout "500s"\
     --service-account tldr-news-discoverer@tldr-news-discovery.iam.gserviceaccount.com

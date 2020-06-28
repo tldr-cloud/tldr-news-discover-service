@@ -1,5 +1,6 @@
 import dateutil.parser
 import json
+import time
 
 from datetime import date, timedelta
 from google.cloud import pubsub_v1
@@ -46,6 +47,9 @@ def publish_latest_news_to_pipeline():
                 topic_path, msg_data
             )
             print("published")
+            # FIXME: On average it takes 30 seconds to process new URL
+            # BERT is the bottle neck.
+            time.sleep(10)
 
 
 if "__main__" == __name__:
