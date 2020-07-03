@@ -53,7 +53,7 @@ def publish_latest_news_to_pipeline():
                                            language="en",
                                            sort_by="relevancy",
                                            sources=sources_str,
-                                           page_size=20)
+                                           page_size=50)
     for headline in top_headlines["articles"]:
         print(headline["title"])
         print(headline["url"])
