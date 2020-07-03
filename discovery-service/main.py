@@ -38,7 +38,7 @@ def publish_url(url):
     print("published")
     # FIXME: On average it takes 30 seconds to process new URL
     # BERT is the bottle neck.
-    time.sleep(10)
+    time.sleep(20)
 
 
 def publish_latest_news_to_pipeline():
@@ -53,7 +53,7 @@ def publish_latest_news_to_pipeline():
                                            language="en",
                                            sort_by="relevancy",
                                            sources=sources_str,
-                                           page_size=50)
+                                           page_size=20)
     for headline in top_headlines["articles"]:
         print(headline["title"])
         print(headline["url"])
@@ -66,7 +66,7 @@ def publish_top_headlights_to_pipeline():
     top_headlines = newsapi.get_top_headlines(category="technology",
                                               language="en",
                                               country="us",
-                                              page_size=100)
+                                              page_size=20)
     print(str(top_headlines))
     for headline in top_headlines["articles"]:
         headline_date = dateutil.parser.parse(headline["publishedAt"]).date()
