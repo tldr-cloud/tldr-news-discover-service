@@ -36,9 +36,7 @@ def publish_url(url):
         topic_path, msg_data
     )
     print("published")
-    # FIXME: On average it takes 30 seconds to process new URL
-    # BERT is the bottle neck.
-    time.sleep(20)
+    time.sleep(5)
 
 
 def publish_latest_news_to_pipeline():
