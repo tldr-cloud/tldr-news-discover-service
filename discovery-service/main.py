@@ -36,7 +36,7 @@ def publish_url(url):
         topic_path, msg_data
     )
     print("published")
-    time.sleep(5)
+    time.sleep(10)
 
 
 def publish_latest_news_to_pipeline():
